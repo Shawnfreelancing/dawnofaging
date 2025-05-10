@@ -1,0 +1,1428 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  /* Optional if you use fixed header instead of sticky */
+  /* padding-top: 80px; */
+}
+
+/* Sticky Header */
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Navigation (Desktop) */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Add margin to last nav item (desktop only) */
+nav ul li:last-child {
+  margin-right: 30px;
+}
+
+/* Social menu (desktop) */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+
+
+
+
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    align-items: center;         /* ensures nav content is centered */
+    text-align: center;          /* ensures nav links & images are centered */
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;         /* center nav links */
+  }
+
+  .social-menu {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;         /* center social icons */
+  }
+
+  .social-menu a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .social-menu img {
+    margin: 4px auto;
+  }
+ 
+  
+  
+}
+
+hero-image-section {
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden;
+  background-color: #000; /* Optional: fills space if image doesn't cover */
+}
+
+.hero-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     /* Shows the entire image */
+  object-position: center;
+  display: block;
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e0e0e0;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: teal;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.learn {
+  text-align: center;
+}
+
+/* Services Section */
+.services {
+  background-color: #f0f0f0;
+  padding: 60px 20px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 90%;
+  max-width: 360px;
+  background: teal;
+  border: 1px solid teal;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* ensures the whole image is shown */
+  max-height: 200px; /* optional cap */
+  margin: 0 auto;
+  display: block;
+}
+
+.card h3,
+.card p {
+  margin: 10px;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+/* Mobile-specific tweaks */
+@media (max-width: 768px) {
+  .card {
+    width: 95%;
+  }
+
+  .card img {
+    max-height: 180px; /* slightly smaller on mobile */
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+/* Testimonials Section */
+.testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px 0;
+}
+
+/* Blog Section */
+.blog {
+  padding: 60px 20px;
+}
+
+.blog ul {
+  list-style: none;
+}
+
+.blog li {
+  margin-bottom: 15px;
+}
+
+.blog a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 60px 10px;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    font-size: 16px;
+  }
+}
+
+/* Founder Section */
+.founder-section {
+  padding: 100px 20px 60px;
+  background-color: #f9f9f9;
+}
+
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.founder-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.founder-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.founder-bio {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.founder-bio h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.founder-credentials {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.founder-credentials li {
+  margin-bottom: 6px;
+}
+
+.founder-text {
+  flex: 2 1 600px;
+  min-width: 300px;
+}
+
+.founder-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.founder-text h4 {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.founder-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===============================
+   Testimonials Section
+================================*/
+
+.testimonials-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 350px;
+  flex: 1 1 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===============================
+   Testimonials Section
+================================*/
+/* Hero Section */
+.hero {
+  background-color: #e0e0e0;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+/* Blog Section */
+.blog {
+  padding: 60px 20px;
+}
+
+.blog-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-post {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 350px;
+  flex: 1 1 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.blog-post h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .blog-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-post {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e0e0e0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Blog Content */
+.blog-content {
+  padding: 40px 20px;
+}
+
+.blog-content h2 {
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.blog-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.blog-content ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-content li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ===============================
+   Recent Posts Section
+================================= */
+.recent-posts {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.recent-posts h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #222;
+}
+
+.post-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.post-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.post-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.post-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.post-card a {
+  color: #333;
+  text-decoration: none;
+}
+
+.post-card a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+  .post-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-card {
+    width: 100%;
+  }
+}
+
+/* ===============================
+   Testimonials Section
+================================*/
+.hero {
+  background-color: #e0e0e0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+.home-safety-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-safety-header h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+
+/* ======================================
+   Home Safety Two-Column Layout
+====================================== */
+
+.home-safety-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+}
+
+.home-safety-content {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.home-safety-location,
+.home-safety-text {
+  flex: 1 1 300px;
+}
+
+.home-safety-location h2,
+.home-safety-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.home-safety-text h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.home-safety-location ul,
+.home-safety-text ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.home-safety-location ul li,
+.home-safety-text ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.home-safety-text p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-safety-content {
+    flex-direction: column;
+  }
+
+  .home-safety-location,
+  .home-safety-text {
+    width: 100%;
+  }
+}
+/* Contact Section */
+.contact {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+.doula-education-header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: #f5f5f5;
+}
+
+.doula-education-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #222;
+  line-height: 1.4;
+}
+
+.doula-education-header h1 small {
+  font-size: 18px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+
+/* ===============================
+   Death Doula Section
+================================= */
+
+.death-doula-section {
+  padding: 60px 20px;
+  background-color: #fcfcfc;
+}
+
+.doula-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.doula-header h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.doula-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.doula-location,
+.doula-text {
+  flex: 1 1 300px;
+}
+
+.doula-location h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.doula-location ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.doula-text h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.doula-text h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.doula-text p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.doula-text ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.doula-text ul li {
+  margin-bottom: 10px;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doula-content {
+    flex-direction: column;
+  }
+
+  .doula-location,
+  .doula-text {
+    width: 100%;
+  }
+}
+
+/* Lifestyle Check-In Header */
+.lifestyle-checkin-header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: #f5f5f5;
+}
+
+.lifestyle-checkin-header h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Section Layout */
+.lifestyle-checkin-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.lifestyle-checkin-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.checkin-location,
+.checkin-text {
+  flex: 1 1 300px;
+}
+
+.checkin-location h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.checkin-location ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.checkin-location li {
+  margin-bottom: 10px;
+}
+
+.checkin-text blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #666;
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+}
+
+.checkin-text blockquote span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #888;
+}
+
+.checkin-text p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Reuse the CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lifestyle-checkin-content {
+    flex-direction: column;
+  }
+
+  .checkin-location,
+  .checkin-text {
+    width: 100%;
+  }
+}
+
+/* Section Header */
+.swedish-cleaning-header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: #f5f5f5;
+}
+
+.swedish-cleaning-header h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+/* Layout */
+.swedish-cleaning-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.swedish-cleaning-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cleaning-location,
+.cleaning-text {
+  flex: 1 1 300px;
+}
+
+.cleaning-location h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.cleaning-location ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.cleaning-text blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #666;
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+}
+
+.cleaning-text blockquote span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #888;
+}
+
+.cleaning-text h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.cleaning-text h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #444;
+}
+
+.cleaning-text p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.cleaning-text ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.cleaning-text ul li {
+  margin-bottom: 10px;
+}
+
+/* Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .swedish-cleaning-content {
+    flex-direction: column;
+  }
+
+  .cleaning-location,
+  .cleaning-text {
+    width: 100%;
+  }
+}
+/* Section Header */
+.doula-terminal-header {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background-color: #f5f5f5;
+}
+
+.doula-terminal-header h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.doula-terminal-header h1 small {
+  font-size: 18px;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Layout */
+.doula-terminal-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.doula-terminal-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.terminal-location,
+.terminal-text {
+  flex: 1 1 300px;
+}
+
+.terminal-location h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.terminal-location ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #444;
+}
+
+.terminal-text blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #666;
+  border-left: 4px solid #ccc;
+  padding-left: 15px;
+}
+
+.terminal-text blockquote span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #888;
+}
+
+.terminal-text h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.terminal-text h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.terminal-text p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.terminal-text ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.terminal-text ul li {
+  margin-bottom: 10px;
+}
+
+/* Reusable CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doula-terminal-content {
+    flex-direction: column;
+  }
+
+  .terminal-location,
+  .terminal-text {
+    width: 100%;
+  }
+}
+
+.holistic-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 25px;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+blockquote {
+  background: #f0f4f8;
+  padding: 15px 20px;
+  border-left: 5px solid #6c9bcf;
+  font-style: italic;
+  margin: 30px 0;
+  color: #555;
+}
+
+footer.tags {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+footer.tags span {
+  margin-right: 10px;
+}
+
+.blog-content {
+  background-color: #fff;
+  padding: 40px 20px;
+  color: #333;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+}
+
+.blog-content .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.blog-content h2 {
+  font-size: 1.4rem;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.blog-content p {
+  margin-bottom: 20px;
+}
+
+.blog-content a {
+  color: #3477cc;
+  text-decoration: underline;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 40px 0;
+}
+.stacked-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* optional: centers them horizontally */
+  gap: 20px; /* optional: space between images */
+}
+
+.stacked-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* optional: rounded corners */
+}
+
+.center-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teal-button {
+  display: inline-block;
+  background-color: teal;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.teal-button:hover {
+  background-color: #006666;
+}
+h1{
+  color: white;
+}
