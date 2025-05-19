@@ -1527,10 +1527,10 @@ li {
 .info-form-wrapper {
   max-width: 600px;
   margin: 0 auto;
-  background: #fff;
+  background-color: #ffffff;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
 .info-form-title {
@@ -1542,35 +1542,38 @@ li {
 
 .info-form label {
   display: block;
-  font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
   color: #333;
 }
 
 .info-form input,
 .info-form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
   transition: border-color 0.3s ease;
+  line-height: 1.5;
 }
 
 .info-form input:focus,
 .info-form textarea:focus {
   border-color: teal;
   outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.15);
 }
 
 .info-submit-button {
-  margin-top: 25px;
+  margin-top: 30px;
   background-color: teal;
-  color: white;
+  color: #ffffff;
   padding: 14px;
   width: 100%;
   font-size: 1rem;
+  font-weight: bold;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -1591,9 +1594,78 @@ li {
     font-size: 1.5rem;
   }
 
+  .info-form input,
+  .info-form textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
   .info-submit-button {
     font-size: 0.95rem;
     padding: 12px;
   }
 }
 
+#thank-you-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.thank-you-wrapper {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.thank-you-title {
+  font-size: 2rem;
+  color: teal;
+  margin-bottom: 20px;
+}
+
+.thank-you-text {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.return-home-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: teal;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.return-home-link:hover {
+  background-color: #006666;
+}
+@media (max-width: 500px) {
+  .thank-you-wrapper {
+    padding: 30px 20px;
+  }
+
+  .thank-you-title {
+    font-size: 1.5rem;
+  }
+
+  .thank-you-text {
+    font-size: 1rem;
+  }
+
+  .return-home-link {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
