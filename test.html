@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div>
+  <input type="text" id="searchInput" placeholder="Search providers..." style="padding:10px; width: 100%; margin-bottom: 20px;" />
+  <table id="providerTable" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Preferred Type</th>
+        <th>Insurance</th>
+        <th>State</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+  const providers = [
+    {
+      "Full Name": "Jane Doe",
+      "Preferred Type": "Therapist",
+      "Insurance": "Aetna",
+      "State": "CA",
+      "Email": "jane@example.com",
+      "Phone": "123-456-7890"
+    },
+    {
+      "Full Name": "John Smith",
+      "Preferred Type": "Psychologist",
+      "Insurance": "Blue Cross",
+      "State": "NY",
+      "Email": "john@example.com",
+      "Phone": "987-654-3210"
+    }
+  ];
+
+  const tbody = document.querySelector("#providerTable tbody");
+
+  function renderTable(data) {
+    tbody.innerHTML = data.map(provider => `
+      <tr>
+        <td>${provider["Full Name"]}</td>
+        <td>${provider["Preferred Type"]}</td>
+        <td>${provider["Insurance"]}</td>
+        <td>${provider["State"]}</td>
+        <td><a href="mailto:${provider["Email"]}">${provider["Email"]}</a></td>
+        <td>${provider["Phone"]}</td>
+      </tr>
+    `).join('');
+  }
+
+  document.getElementById("searchInput").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const filtered = providers.filter(p =>
+      Object.values(p).some(val => val.toLowerCase().includes(query))
+    );
+    renderTable(filtered);
+  });
+
+  renderTable(providers);
+</script>
+
+  
+</body>
+</html>
