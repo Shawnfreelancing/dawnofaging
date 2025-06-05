@@ -1855,3 +1855,15 @@ li {
     max-width: 240px;
   }
 }
+
+.pdf-links a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.pdf-links a:hover {
+  text-decoration: underline;
+}
