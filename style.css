@@ -1867,3 +1867,80 @@ li {
 .pdf-links a:hover {
   text-decoration: underline;
 }
+
+/* combined  pages */
+
+  .doula-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .doula-heading {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #444;
+    }
+
+    .accordion {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      cursor: pointer;
+      padding: 20px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      background-color: #eaf3fa;
+      color: #0073aa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-header:hover {
+      background-color: #d8ebf6;
+    }
+
+    .accordion-content {
+      padding: 20px;
+      display: none;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .accordion-content p, .accordion-content ul, .accordion-content li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .accordion-content ul {
+      padding-left: 20px;
+    }
+
+    .accordion.open .accordion-content {
+      display: block;
+    }
+
+    .quote {
+      margin-top: 30px;
+      font-style: italic;
+      text-align: center;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .accordion.open .arrow {
+      transform: rotate(90deg);
+    }
